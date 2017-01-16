@@ -1,6 +1,6 @@
 (function () {
 'use strict';
-
+//nbarman
 angular.module('LunchCheck', [])
 
 .controller('LunchController', LunchController);
@@ -28,8 +28,15 @@ function LunchController($scope) {
     };
 
   function checkNumOfItems(lunchItems, seperator){
-     var numOfItems = lunchItems.split(seperator);
-      return numOfItems.length;
+    var numOfItems = 0, i;
+     var numOfItemsArray = lunchItems.split(seperator);
+     for( i=0;i<numOfItemsArray.length;i++){
+
+       if(numOfItemsArray[i]){
+          numOfItems++; //checks for empty string between commas
+       }
+     }
+      return numOfItems;
   }
 
 
