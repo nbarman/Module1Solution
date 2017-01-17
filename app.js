@@ -11,7 +11,7 @@ LunchController.inject =['$scope']; //Guarded against minify
 function LunchController($scope) {
 
   $scope.message = "No input";
-  $scope.appTitle = "MyLunchChecker";
+  $scope.appTitle = "Lunch Checker";
 
   $scope.checkNumLunchItems = function(){
   if($scope.lunchBoxItems == '' || $scope.lunchBoxItems == null){

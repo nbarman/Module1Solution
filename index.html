@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <link rel = "stylesheet" type = "text/css" href = "styles/bootstrap.min.css" />
     <script src="angular.min.js"></script>
     <script src="app.js"></script>
     <title>Lunch Checker</title>
@@ -11,11 +12,14 @@
     </style>
   </head>
 <body ng-app ="LunchCheck">
-   <div class="container" ng-controller="LunchController">
+   <div class="container" ng-controller="LunchController" id="boxed">
      <h1>{{appTitle}}</h1>
+     <div class="img-thumbnail">
+        <img ng-src="images/lunch_banner.jpg" height="100px" width="140px" >
+     </div>
 
-         <div class="form-group">
-           <label> This Code does not consider empty item, i.e., , , as an item towards to the count</label>
+         <div class="form-group"><hr>
+           <div id="label-msg"> This Code does not consider empty item, i.e., , , as an item towards to the count</div>
              <input id="lunch-menu" type="text"
              placeholder="list comma separated dishes you usually have for lunch"
              class="form-control" ng-model="lunchBoxItems">
